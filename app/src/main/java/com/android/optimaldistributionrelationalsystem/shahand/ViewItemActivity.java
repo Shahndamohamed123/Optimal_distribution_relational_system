@@ -3,15 +3,22 @@ package com.android.optimaldistributionrelationalsystem.shahand;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
+import com.android.optimaldistributionrelationalsystem.R;
 import com.android.optimaldistributionrelationalsystem.Status2Activity;
 import com.android.optimaldistributionrelationalsystem.databinding.ActivityViewItemBinding;
+
+import java.util.ArrayList;
 
 public class ViewItemActivity extends AppCompatActivity {
 
     ActivityViewItemBinding binding;
-    AdapterRecycler adapter = new AdapterRecycler();
+
+    ArrayList<orderItem> orderItems;
+    AdapterRecycler adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +26,15 @@ public class ViewItemActivity extends AppCompatActivity {
         binding = ActivityViewItemBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+//        binding.recyclerView.setAdapter(adapter);
+
+        orderItems = new ArrayList<>();
+        orderItems.add(new orderItem("IPhone", 14000, R.drawable.iphone));
+
+        adapter = new AdapterRecycler(orderItems, this);
         binding.recyclerView.setAdapter(adapter);
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         // there no thing left put list of data in adapter
 
         onClick();

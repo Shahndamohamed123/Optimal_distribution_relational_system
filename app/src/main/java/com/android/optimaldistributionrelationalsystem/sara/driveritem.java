@@ -18,10 +18,12 @@ public class driveritem {
     }
 
     public void setDriverimage(int driverimage) {
+
         this.driverimage = driverimage;
     }
 
     public void setDrivername(String drivername) {
+
         this.drivername = drivername;
     }
 }

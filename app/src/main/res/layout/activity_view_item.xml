@@ -32,6 +32,7 @@
         app:spanCount="2"
         tools:listitem="@layout/recycle_item" />
 
+    recyclerView.setLayoutManager(new LinearLayoutManager(this));
     <com.google.android.material.button.MaterialButton
         android:id="@+id/materialButton"
         android:layout_width="wrap_content"
