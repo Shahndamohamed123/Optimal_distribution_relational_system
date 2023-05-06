@@ -40,8 +40,6 @@ public class DrAdapter extends RecyclerView.Adapter<DrAdapter.viewHolder> {
         final driveritem items = pl.get(position);
         holder.driverimage.setImageResource(items.getDriverimage());
         holder.drivername.setText(items.getDrivername());
-
-
     }
 
     @Override

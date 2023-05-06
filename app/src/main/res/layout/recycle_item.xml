@@ -57,7 +57,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/materialButton"
             app:layout_constraintTop_toTopOf="@+id/materialButton"
-            tools:text="Number" />
+             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -26,10 +26,9 @@ public class ViewItemActivity extends AppCompatActivity {
         binding = ActivityViewItemBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-//        binding.recyclerView.setAdapter(adapter);
-
         orderItems = new ArrayList<>();
-        orderItems.add(new orderItem("IPhone", 14000, R.drawable.iphone));
+
+        orderItems.add(new orderItem(R.drawable.iphone,"Iphone","15000"));
 
         adapter = new AdapterRecycler(orderItems, this);
         binding.recyclerView.setAdapter(adapter);
@@ -57,7 +56,5 @@ public class ViewItemActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
-
 }

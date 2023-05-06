@@ -3,7 +3,13 @@ package com.android.optimaldistributionrelationalsystem.shahand;
 public class orderItem {
     int orderImage;
     String name;
-    int number;
+    String number;
+
+    public orderItem(int orderImage, String name, String number) {
+        this.orderImage = orderImage;
+        this.name = name;
+        this.number = number;
+    }
 
     public String getName() {
         return name;
@@ -13,11 +19,12 @@ public class orderItem {
         this.name = name;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+
+    public void setNumber(String number) {
         this.number = number;
     }
 
@@ -29,9 +36,4 @@ public class orderItem {
         this.orderImage = orderImage;
     }
 
-    public orderItem(String name, int number, int orderImage) {
-        this.name = name;
-        this.number = number;
-        this.orderImage = orderImage;
-    }
 }

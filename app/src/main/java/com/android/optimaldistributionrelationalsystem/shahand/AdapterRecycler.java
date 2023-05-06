@@ -36,10 +36,10 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.Holder
         final orderItem items = pl.get(position);
 
         holder.binding.productName.setText(items.getName());
-        holder.binding.number.setText(items.getNumber());
         holder.binding.imageView.setImageResource(items.getOrderImage());
+        holder.binding.number.setText(items.getNumber());
 
-//        holder.binding.materialButton.setOnClickListener(new View.OnClickListener() {
+        //        holder.binding.materialButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
 //                //here put what the button doing
@@ -49,7 +49,6 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.Holder
 
     @Override
     public int getItemCount() {
-
         return pl.size();
     }
 
